@@ -1,2 +1,10 @@
 <h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+
+<div class="well well-sm col-md-5">Number of products: <%= @products.count %>  |   <%= link_to 'See all products', '/admin/products' %></div>
+<div class="well well-sm col-md-5 col-md-offset-2">Number of categories: <%= @categories.count %> 
+<ul>
+<% @categories.each do |categorie| %>
+  <li><%= link_to categorie.name, '/admin/categories' %></li>
+<% end %>
+</ul>
+</div>
