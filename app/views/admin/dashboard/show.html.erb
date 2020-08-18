@@ -1,10 +1,17 @@
 <h1>Admin::Dashboard#show</h1>
 
-<div class="well well-sm col-md-5">Number of products: <%= @products.count %>  |   <%= link_to 'See all products', '/admin/products' %></div>
+<div class="well well-sm col-md-5">Number of products: <%= @products.count %>  |   <%= link_to 'See all products', '/admin/products' %>
+<ul>
+<% @products.each do |product| %>
+  <li><%= link_to product.name, product_path(product.id) %></li>
+<% end %>
+</ul>
+
+</div>
 <div class="well well-sm col-md-5 col-md-offset-2">Number of categories: <%= @categories.count %> 
 <ul>
 <% @categories.each do |categorie| %>
-  <li><%= link_to categorie.name, '/admin/categories' %></li>
+  <li><%= link_to categorie.name, category_path(categorie.id) %></li>
 <% end %>
 </ul>
 </div>
