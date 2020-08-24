@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   @newUser = User.create({
     name:'Jamie',
-    email:'jb@gmail.com',
+    email:'jbv@gmail.com',
     password:'asd123!',
     password_confirmation:'asd123!'
   })
@@ -40,7 +40,7 @@ RSpec.describe User, type: :model do
       expect { 
         User.create({
           name:'vincent',
-          email:'jb@gmail.com',
+          email:'jbv@gmail.com',
           password:'asd123!',
           password_confirmation:'asd123!'
         })
@@ -78,6 +78,26 @@ RSpec.describe User, type: :model do
         password:'asd123!',
         password_confirmation:'asd123!'
     })}.to change {User.count}
+    end
+  end
+
+  describe '.authenticate_with_credentials' do
+    it('should log the user with the appropriate credentials') do
+      user = User.find_by({email:'jbv@gmail.com'})
+    loggedUser = User.authenticate_with_credentials('jbv@gmail.com', 'asd123!')
+    expect(loggedUser).to eq(user)
+    end
+
+    it('should log if user has leading or trailing spaces') do
+      user = User.find_by({email: 'jbv@gmail.com'})
+      loggedUser = User.authenticate_with_credentials('  jbv@gmail.com ', 'asd123!')
+      expect(loggedUser).to eq(user)
+    end
+
+    it('should log if user uppercase its email') do
+      user = User.find_by({email: 'jbv@gmail.com'})
+      loggedUser = User.authenticate_with_credentials('JBV@GMAIL.COM', 'asd123!') 
+      expect(loggedUser).to eq(user)
     end
   end
 end
