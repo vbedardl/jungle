@@ -3,9 +3,13 @@
 <%= form_for :user, url: '/users' do |f| %>
 
   <div class="form-group">
-    <label for="a">Name:</label>
-    <%= f.text_field :name, class:"form-control"%>
+    <label for="a">First name:</label>
+    <%= f.text_field :first_name, class:"form-control"%>
   </div>
+  <div class="form-group">
+  <label for="a">Last name:</label>
+  <%= f.text_field :last_name, class:"form-control"%>
+</div>
   <div class="form-group">
     <label for="a">Email:</label>
     <%= f.text_field :email, class:"form-control"%>

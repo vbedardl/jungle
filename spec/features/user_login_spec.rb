@@ -10,7 +10,8 @@ RSpec.feature "user login", type: :feature, js: true do
   # SETUP
   before :each do
     User.create!({
-      name:'Vincent',
+      first_name:'Vincent',
+      last_name: 'Bedard'
       email:'vincent@gmail.com',
       password: 'password',
       password_confirmation: 'password'

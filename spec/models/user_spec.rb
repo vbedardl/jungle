@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   @newUser = User.create({
-    name:'Jamie',
+    first_name:'Jamie',
+    last_name: 'Blair',
     email:'jbv@gmail.com',
     password:'asd123!',
     password_confirmation:'asd123!'
@@ -11,7 +12,8 @@ RSpec.describe User, type: :model do
   describe 'Validations' do
     it("should create a user") do
       expect { User.create({
-        name:'vincent',
+        first_name:'vincent',
+        last_name:'Bedard',
         email:'vb@gmail.com',
         password:'asd123!',
         password_confirmation:'asd123!'
@@ -20,7 +22,8 @@ RSpec.describe User, type: :model do
     
     it('should have password and password_confirmation field') do
       expect { User.create({
-        name:'vincent',
+        first_name:'vincent',
+        last_name:'Bedard',
         email:'vb@gmail.com',
         password:'asd123!',
         password_confirmation:'asd123!'
@@ -29,7 +32,8 @@ RSpec.describe User, type: :model do
 
     it('should not pass if password do not match password_confirmation') do
       expect { User.create({
-        name:'vincent',
+        first_name:'vincent',
+        last_name:'Bedard',
         email:'vb@gmail.com',
         password:'abc123!',
         password_confirmation:'asd123!'
@@ -39,7 +43,8 @@ RSpec.describe User, type: :model do
     it('Email must be unique') do
       expect { 
         User.create({
-          name:'vincent',
+          first_name:'vincent',
+          last_name:'Bedard',
           email:'jbv@gmail.com',
           password:'asd123!',
           password_confirmation:'asd123!'
@@ -49,7 +54,8 @@ RSpec.describe User, type: :model do
 
     it('Email should be required') do
       expect { User.create({
-        name:'vincent',
+        first_name:'vincent',
+        last_name:'Bedard',
         email: nil,
         password:'asd123!',
         password_confirmation:'asd123!'
@@ -58,7 +64,8 @@ RSpec.describe User, type: :model do
 
     it('Name should be required') do
       expect { User.create({
-        name:'vincent',
+        first_name:'vincent',
+        last_name:'Bedard',
         email: 'vb@gmail.com',
         password:'asd123!',
         password_confirmation:'asd123!'
@@ -67,13 +74,15 @@ RSpec.describe User, type: :model do
 
     it('password must have minimum length of 7') do
       expect { User.create({
-        name:'vincent',
+        first_name:'vincent',
+        last_name:'Bedard',
         email:'va@gmail.com',
         password:'as',
         password_confirmation:'as'
     })}.not_to change {User.count}
       expect { User.create({
-        name:'vincent',
+        first_name:'vincent',
+        last_name:'Bedard',
         email:'vb@gmail.com',
         password:'asd123!',
         password_confirmation:'asd123!'
