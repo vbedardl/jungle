@@ -132,5 +132,23 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+User.create!({
+  first_name:'Vincent',
+  last_name:'Bedard',
+  email:'vb@gmail.com',
+  password:'password',
+  password_confirmation:'password'
+})
+prod1 = Product.find_by! name: 'Red Bookshelf'
+prod1.reviews.create({
+  user_id:1,
+  description: 'That is a really great red bookshelf. I can stack tons of books in there.',
+  rating: 4
+})
+prod1.reviews.create({
+  user_id:1,
+  description: 'I am not a big fan of the color though...',
+  rating: 2
+})
 
 puts "DONE!"
