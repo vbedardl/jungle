@@ -39,3 +39,10 @@ As an admin user you can:
 - Add and delete products from the e-commerce
 - Add and delete categories from the e-commerce
 - Have access to a dashboard to see your stock, products available and existing categories
+
+## Screenshots
+
+![Homepage](“https://raw.githubusercontent.com/vbedardl/jungle/master/doc/Homepage_Screenshot.png”)
+![Product page](“https://raw.githubusercontent.com/vbedardl/jungle/master/doc/Productpage_Screenshot.png.png”)
+![Cart page](“https://raw.githubusercontent.com/vbedardl/jungle/master/doc/Cart_Screenshot.png.png”)
+![Order page](“https://raw.githubusercontent.com/vbedardl/jungle/master/doc/Order_Screenshot.png.png”)
