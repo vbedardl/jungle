@@ -29,10 +29,10 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 As a logged in user you can:
 
-- add items to your cart
-- add, edit and delete reviews and rating on a product page
-- pay for your order via stripe
-- receive a confirmation email for your order
+- Add items to your cart
+- Add, edit and delete reviews and rating on a product page
+- Pay for your order via stripe
+- Receive a confirmation email for your order
 
 As an admin user you can:
 
@@ -42,7 +42,7 @@ As an admin user you can:
 
 ## Screenshots
 
-![Homepage](“https://raw.githubusercontent.com/vbedardl/jungle/master/doc/Homepage_Screenshot.png”)
-![Product page](“https://raw.githubusercontent.com/vbedardl/jungle/master/doc/Productpage_Screenshot.png.png”)
-![Cart page](“https://raw.githubusercontent.com/vbedardl/jungle/master/doc/Cart_Screenshot.png.png”)
-![Order page](“https://raw.githubusercontent.com/vbedardl/jungle/master/doc/Order_Screenshot.png.png”)
+!["Homepage"](https://raw.githubusercontent.com/vbedardl/jungle/master/doc/Homepage_Screenshot.png)
+!["Product page"](https://raw.githubusercontent.com/vbedardl/jungle/master/doc/Productpage_Screenshot.png.png)
+!["Cart page"](https://raw.githubusercontent.com/vbedardl/jungle/master/doc/Cart_Screenshot.png.png)
+!["Order page"](https://raw.githubusercontent.com/vbedardl/jungle/master/doc/Order_Screenshot.png.png)
